@@ -1,0 +1,20 @@
+# Environment / segredos
+.env
+*.env
+.env.local
+.env.*.local
+
+# Sistema
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Arquivos temporarios / backup
+*.bak
+*.tmp
+backup/
+dist-backup/
