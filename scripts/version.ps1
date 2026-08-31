@@ -45,7 +45,7 @@ if (Test-Path $html) {
   $content = Get-Content $html -Raw -Encoding UTF8
   $pattern = '(?s)(<title>.*?</title>)'
   if ($content -match $pattern) {
-    $replacement = '${1}`r`n  <meta name="version" content="' + $new + '">'
+    $replacement = '${1}' + "`r`n" + '  <meta name="version" content="' + $new + '">'
     $content = [regex]::Replace($content, $pattern, $replacement, [System.Text.RegularExpressions.RegexOptions]::Singleline)
     Set-Content -Path $html -Value $content -Encoding UTF8 -NoNewline
   }
